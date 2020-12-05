@@ -41,6 +41,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
+      - name: Add codecov
+        run: yarn add codecov
+
       - name: Install dependencies 👨🏻‍💻
         run: yarn
 
@@ -49,3 +52,7 @@ jobs:
 
       - name: Run tests 🧪
         run: yarn test
+
+      - name: Collect coverage
+        env: CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        run: yarn codecov
