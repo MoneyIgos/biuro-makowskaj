@@ -30,20 +30,3 @@ updates:
     prefix: fix
     prefix-development: chore
     include: scope
-    
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Build
-        run: |
-          echo installing codecov
-          yarn add codecov
-          echo installing dependencies
-          yarn
-          echo building application
-          yarn build
-          echo linting application
-          yarn lint
