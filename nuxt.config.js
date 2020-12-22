@@ -2,14 +2,26 @@ import colors from 'vuetify/es5/util/colors';
 
 export default {
   head: {
-    titleTemplate: '%s - biuro-makowskaj',
-    title: 'biuro-makowskaj',
+    titleTemplate: 'Biuro Makowskaj',
+    title: 'Biuro Makowskaj',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Kompleksowa obsługa księgowa dla firm i osób prywatnych'
+      }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap'
+      }
+    ]
   },
   css: [],
   plugins: [],
@@ -25,11 +37,12 @@ export default {
     customVariables: ['~/assets/variables.scss'],
     theme: {
       dark: true,
+      defaut: 'dark',
       themes: {
         dark: {
-          primary: colors.blue.darken2,
+          primary: '#ffffff',
           accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
+          secondary: '5b0770',
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
