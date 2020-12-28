@@ -1,8 +1,15 @@
 <template>
   <v-app dark style="background: rgba(0, 0, 0, 0)">
-    <v-container class="d-flex">
-      <!-- <fa :icon="['fab', 'facebook']" /> -->
-      <header class="d-flex justify-space-between align-end header">
+    <v-container class="d-flex flex-column">
+      <div class="socials d-flex justify-end">
+        <a
+          href="https://www.facebook.com/BiuroRachunkoweJoannaMakowska"
+          target="_blank"
+        >
+          <fa :icon="['fab', 'facebook']" />
+        </a>
+      </div>
+      <header class="d-flex flex-row justify-space-around align-end header">
         <div class="d-flex flex-column">
           <h1 class="justify-self-start">Biuro Rachunkowe Joanna Makowska</h1>
           <p class="justify-self-end headline">
@@ -36,13 +43,17 @@ h1 {
 .container {
   width: 100vw;
   height: 200vh;
+  margin: 0;
 }
 .header {
-  margin-top: 80vh;
+  margin-top: 50vh;
   width: 100vw;
   height: 10vh;
 }
 .scroll-btn {
   cursor: pointer;
+}
+.socials {
+  margin-top: 30vh;
 }
 </style>
