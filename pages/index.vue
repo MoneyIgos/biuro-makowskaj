@@ -6,7 +6,7 @@
           href="https://www.facebook.com/BiuroRachunkoweJoannaMakowska"
           target="_blank"
         >
-          <fa :icon="['fab', 'facebook']" class="icon" />
+          <fa :icon="['fab', 'facebook']" class="icon-l" />
         </a>
       </div>
       <header class="d-flex flex-row justify-space-around align-end header">
@@ -18,7 +18,7 @@
         </div>
         <fa
           icon="arrow-circle-down"
-          class="scroll-btn icon"
+          class="scroll-btn icon-m"
           @click="$vuetify.goTo(700)"
         />
       </header>
@@ -56,7 +56,10 @@ h1 {
 .socials {
   margin-top: 30vh;
 }
-.icon {
+.icon-m {
   font-size: 24px;
+}
+.icon-l {
+  font-size: 32px;
 }
 </style>
