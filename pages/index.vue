@@ -1,17 +1,33 @@
 <template>
-  <v-app dark>
-    <v-container class="d-flex flex-column justify-end">
-      <header class="d-flex flex-column">
-        <h1 class="justify-self-start">Biuro Rachunkowe Joanna Makowska</h1>
-        <p class="justify-self-end headline">
-          Kompleksowa obsługa księgowa dla firm i osób prywatnych
-        </p>
+  <v-app dark style="background: rgba(0, 0, 0, 0)">
+    <v-container class="d-flex">
+      <!-- <fa :icon="['fab', 'facebook']" /> -->
+      <header class="d-flex justify-space-between align-end header">
+        <div class="d-flex flex-column">
+          <h1 class="justify-self-start">Biuro Rachunkowe Joanna Makowska</h1>
+          <p class="justify-self-end headline">
+            Kompleksowa obsługa księgowa dla firm i osób prywatnych
+          </p>
+        </div>
+        <fa
+          icon="arrow-circle-down"
+          class="scroll-btn"
+          @click="$vuetify.goTo(700)"
+        />
       </header>
     </v-container>
   </v-app>
 </template>
 
 <style lang="scss">
+body {
+  background-image: url(../static/background.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+  margin: 0 !important;
+}
 h1 {
   font-family: $header-font !important;
   letter-spacing: 3px;
@@ -19,6 +35,14 @@ h1 {
 }
 .container {
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
+}
+.header {
+  margin-top: 80vh;
+  width: 100vw;
+  height: 10vh;
+}
+.scroll-btn {
+  cursor: pointer;
 }
 </style>

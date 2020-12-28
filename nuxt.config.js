@@ -29,9 +29,17 @@ export default {
   buildModules: [
     '@nuxt/typescript-build',
     '@nuxtjs/stylelint-module',
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    '@nuxtjs/fontawesome'
   ],
-  modules: ['@nuxtjs/axios', '@nuxtjs/pwa'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/pwa', '@nuxtjs/fontawesome'],
+  fontawesome: {
+    component: 'fa',
+    icons: {
+      brands: true,
+      solid: true
+    }
+  },
   axios: {},
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
