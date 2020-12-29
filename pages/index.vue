@@ -19,16 +19,22 @@
         <fa
           icon="arrow-circle-down"
           class="scroll-btn icon-m"
-          @click="$vuetify.goTo(700)"
+          @click="$vuetify.goTo(950)"
         />
       </header>
+      <nav class="navbar">
+        <div class="navbar__links d-flex justify-space-around">
+          <button>Oferta</button>
+          <button>Kontakt</button>
+        </div>
+      </nav>
     </v-container>
   </v-app>
 </template>
 
 <style lang="scss">
 body {
-  background-image: url(../static/background.jpg);
+  background-image: url('../static/background.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -44,9 +50,11 @@ h1 {
   width: 100vw;
   height: 200vh;
   margin: 0;
+  padding: 0;
 }
 .header {
-  margin-top: 50vh;
+  margin-top: 47vh;
+  margin-bottom: 2vh;
   width: 100vw;
   height: 10vh;
 }
@@ -61,5 +69,15 @@ h1 {
 }
 .icon-l {
   font-size: 32px;
+}
+.navbar {
+  width: 100vw;
+  height: 130px;
+  background-image: url('../static/footer.svg');
+
+  &__links {
+    margin-top: 7vh;
+    font-size: 24px;
+  }
 }
 </style>
