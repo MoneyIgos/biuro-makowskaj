@@ -24,8 +24,18 @@
       </header>
       <nav class="navbar">
         <div class="navbar__links d-flex justify-space-around">
-          <button>Oferta</button>
-          <button>Kontakt</button>
+          <button class="d-flex flex-column align-center">
+            <fa icon="calendar-alt" class="icon-l" />
+            Nowości
+          </button>
+          <button class="d-flex flex-column align-center">
+            <fa icon="file-invoice-dollar" class="icon-l" />
+            Oferta
+          </button>
+          <button class="d-flex flex-column align-center">
+            <fa icon="address-card" class="icon-l" />
+            Kontakt
+          </button>
         </div>
       </nav>
     </v-container>
@@ -53,7 +63,7 @@ h1 {
   padding: 0;
 }
 .header {
-  margin-top: 47vh;
+  margin-top: 41vh;
   margin-bottom: 2vh;
   width: 100vw;
   height: 10vh;
@@ -76,7 +86,7 @@ h1 {
   background-image: url('../static/footer.svg');
 
   &__links {
-    margin-top: 7vh;
+    margin-top: 6vh;
     font-size: 24px;
   }
 }
