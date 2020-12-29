@@ -15,12 +15,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap'
-      }
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com' }
     ]
   },
   css: [],

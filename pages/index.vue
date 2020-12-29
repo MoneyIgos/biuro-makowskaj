@@ -10,16 +10,15 @@
         </a>
       </div>
       <header class="d-flex flex-row justify-space-around align-end header">
-        <div class="d-flex flex-column">
-          <h1 class="justify-self-start">Biuro Rachunkowe Joanna Makowska</h1>
-          <p class="justify-self-end headline">
-            Kompleksowa obsługa księgowa dla firm i osób prywatnych
-          </p>
+        <div class="logo d-flex flex-column align-center">
+          <h1>BIURO</h1>
+          <h1>RACHUNKOWE</h1>
+          <p class="logo__label">JOANNA MAKOWSKA</p>
         </div>
         <fa
           icon="arrow-circle-down"
           class="scroll-btn icon-m"
-          @click="$vuetify.goTo(950)"
+          @click="$vuetify.goTo(880)"
         />
       </header>
       <nav class="navbar">
@@ -52,9 +51,11 @@ body {
   margin: 0 !important;
 }
 h1 {
-  font-family: $header-font !important;
-  letter-spacing: 3px;
+  font-family: $logo-header-font !important;
+  letter-spacing: 10px;
+  font-weight: 400;
   font-size: 86px;
+  height: 80px;
 }
 .container {
   width: 100vw;
@@ -89,5 +90,14 @@ h1 {
     margin-top: 6vh;
     font-size: 24px;
   }
+}
+.logo__label {
+  margin-top: 40px;
+  border-top: 3px solid #fff;
+  width: 500px;
+  padding: 15px;
+  text-align: center;
+  font-family: $logo-label-font !important;
+  letter-spacing: 10px;
 }
 </style>
