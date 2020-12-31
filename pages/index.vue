@@ -9,43 +9,64 @@
           <fa :icon="['fab', 'facebook']" class="icon-l" />
         </a>
       </div>
-      <header class="d-flex flex-row justify-space-around align-end header">
+      <div class="d-flex flex-row justify-space-around align-end header">
         <div class="logo d-flex flex-column align-center">
-          <h1>BIURO</h1>
-          <h1>RACHUNKOWE</h1>
-          <p class="logo__label">JOANNA MAKOWSKA</p>
+          <h1 class="text-uppercase">Biuro</h1>
+          <h1 class="text-uppercase">Rachunkowe</h1>
+          <p class="logo__label text-uppercase">Joanna Makowska</p>
         </div>
         <fa
           icon="arrow-circle-down"
           class="scroll-btn icon-m"
           @click="$vuetify.goTo(880)"
         />
-      </header>
-      <nav class="navbar">
+      </div>
+      <div class="navbar">
         <v-tabs
           fixed-tabs
           icons-and-text
           background-color="rgba(0, 0, 0, 0)"
           class="navbar__links"
         >
-          <v-tab class="d-flex flex-column align-center">
+          <v-tab
+            class="d-flex flex-column align-center"
+            :nuxt="true"
+            to="/about"
+            @click="$vuetify.goTo(880)"
+          >
             <fa icon="address-card" class="icon-l" />
             O mnie
           </v-tab>
-          <v-tab class="d-flex flex-column align-center">
+          <v-tab
+            class="d-flex flex-column align-center"
+            :nuxt="true"
+            to="/news"
+            @click="$vuetify.goTo(880)"
+          >
             <fa icon="calendar-alt" class="icon-l" />
             Nowości
           </v-tab>
-          <v-tab class="d-flex flex-column align-center">
+          <v-tab
+            class="d-flex flex-column align-center"
+            :nuxt="true"
+            to="/offer"
+            @click="$vuetify.goTo(880)"
+          >
             <fa icon="file-invoice-dollar" class="icon-l" />
             Oferta
           </v-tab>
-          <v-tab class="d-flex flex-column align-center">
+          <v-tab
+            class="d-flex flex-column align-center"
+            :nuxt="true"
+            to="/contact"
+            @click="$vuetify.goTo(880)"
+          >
             <fa icon="envelope-open-text" class="icon-l" />
             Kontakt
           </v-tab>
         </v-tabs>
-      </nav>
+      </div>
+      <nuxt-child />
     </v-container>
   </v-app>
 </template>
@@ -59,13 +80,6 @@ body {
   overflow-x: hidden;
   margin: 0 !important;
 }
-h1 {
-  font-family: $logo-header-font !important;
-  letter-spacing: 10px;
-  font-weight: 400;
-  font-size: 86px;
-  height: 80px;
-}
 .container {
   width: 100vw;
   height: 200vh;
@@ -77,6 +91,14 @@ h1 {
   margin-bottom: 2vh;
   width: 100vw;
   height: 10vh;
+
+  h1 {
+    font-family: $logo-header-font !important;
+    letter-spacing: 10px;
+    font-weight: 400;
+    font-size: 86px;
+    height: 80px;
+  }
 }
 .scroll-btn {
   cursor: pointer;
