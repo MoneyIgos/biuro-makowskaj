@@ -22,20 +22,29 @@
         />
       </header>
       <nav class="navbar">
-        <div class="navbar__links d-flex justify-space-around">
-          <button class="d-flex flex-column align-center">
+        <v-tabs
+          fixed-tabs
+          icons-and-text
+          background-color="rgba(0, 0, 0, 0)"
+          class="navbar__links"
+        >
+          <v-tab class="d-flex flex-column align-center">
+            <fa icon="address-card" class="icon-l" />
+            O mnie
+          </v-tab>
+          <v-tab class="d-flex flex-column align-center">
             <fa icon="calendar-alt" class="icon-l" />
             Nowości
-          </button>
-          <button class="d-flex flex-column align-center">
+          </v-tab>
+          <v-tab class="d-flex flex-column align-center">
             <fa icon="file-invoice-dollar" class="icon-l" />
             Oferta
-          </button>
-          <button class="d-flex flex-column align-center">
-            <fa icon="address-card" class="icon-l" />
+          </v-tab>
+          <v-tab class="d-flex flex-column align-center">
+            <fa icon="envelope-open-text" class="icon-l" />
             Kontakt
-          </button>
-        </div>
+          </v-tab>
+        </v-tabs>
       </nav>
     </v-container>
   </v-app>
@@ -88,7 +97,7 @@ h1 {
 
   &__links {
     margin-top: 6vh;
-    font-size: 24px;
+    font-size: 32px;
   }
 }
 .logo__label {
