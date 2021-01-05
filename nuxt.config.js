@@ -10,13 +10,13 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Kompleksowa obsługa księgowa dla firm i osób prywatnych'
-      }
+        content: 'Kompleksowa obsługa księgowa dla firm i osób prywatnych',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com' }
-    ]
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+    ],
   },
   css: [],
   plugins: [],
@@ -25,15 +25,15 @@ export default {
     '@nuxt/typescript-build',
     '@nuxtjs/stylelint-module',
     '@nuxtjs/vuetify',
-    '@nuxtjs/fontawesome'
+    '@nuxtjs/fontawesome',
   ],
   modules: ['@nuxtjs/axios', '@nuxtjs/pwa', '@nuxtjs/fontawesome'],
   fontawesome: {
     component: 'fa',
     icons: {
       brands: true,
-      solid: true
-    }
+      solid: true,
+    },
   },
   axios: {},
   vuetify: {
@@ -49,10 +49,10 @@ export default {
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
-    }
+          success: colors.green.accent3,
+        },
+      },
+    },
   },
-  build: {}
+  build: {},
 };
