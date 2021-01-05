@@ -29,40 +29,15 @@
           class="navbar__links"
         >
           <v-tab
+            v-for="item in items"
+            :key="item"
             class="d-flex flex-column align-center"
             :nuxt="true"
-            to="/about"
+            :to="item.page"
             @click="$vuetify.goTo(880)"
           >
-            <fa icon="address-card" class="icon-l" />
-            O mnie
-          </v-tab>
-          <v-tab
-            class="d-flex flex-column align-center"
-            :nuxt="true"
-            to="/news"
-            @click="$vuetify.goTo(880)"
-          >
-            <fa icon="calendar-alt" class="icon-l" />
-            Nowości
-          </v-tab>
-          <v-tab
-            class="d-flex flex-column align-center"
-            :nuxt="true"
-            to="/offer"
-            @click="$vuetify.goTo(880)"
-          >
-            <fa icon="file-invoice-dollar" class="icon-l" />
-            Oferta
-          </v-tab>
-          <v-tab
-            class="d-flex flex-column align-center"
-            :nuxt="true"
-            to="/contact"
-            @click="$vuetify.goTo(880)"
-          >
-            <fa icon="envelope-open-text" class="icon-l" />
-            Kontakt
+            <fa :icon="item.icon" class="icon-l" />
+            {{ item.name }}
           </v-tab>
         </v-tabs>
       </div>
@@ -70,6 +45,39 @@
     </v-container>
   </v-app>
 </template>
+
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
+  data() {
+    return {
+      items: [
+        {
+          name: 'O mnie',
+          page: '/about',
+          icon: 'address-card',
+        },
+        {
+          name: 'Nowości',
+          page: '/news',
+          icon: 'calendar-alt',
+        },
+        {
+          name: 'Oferta',
+          page: '/offer',
+          icon: 'file-invoice-dollar',
+        },
+        {
+          name: 'Kontakt',
+          page: '/contact',
+          icon: 'envelope-open-text',
+        },
+      ],
+    };
+  },
+});
+</script>
 
 <style lang="scss">
 body {
