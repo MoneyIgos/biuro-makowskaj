@@ -41,7 +41,9 @@
           </v-tab>
         </v-tabs>
       </div>
-      <nuxt-child />
+      <div dark class="child grey darken-4">
+        <nuxt-child />
+      </div>
     </v-container>
   </v-app>
 </template>
@@ -87,6 +89,10 @@ body {
   background-size: cover;
   overflow-x: hidden;
   margin: 0 !important;
+}
+.child {
+  width: 100vw;
+  height: 100vh;
 }
 .container {
   width: 100vw;
