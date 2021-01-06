@@ -44,14 +44,21 @@
       <div dark class="child grey darken-4">
         <nuxt-child />
       </div>
+      <div class="footer">
+        <Footer />
+      </div>
     </v-container>
   </v-app>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import Footer from '../components/Footer';
 
 export default Vue.extend({
+  components: {
+    Footer,
+  },
   data() {
     return {
       items: [
@@ -92,7 +99,12 @@ body {
 }
 .child {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
+}
+.footer {
+  width: 100vw;
+  height: 10vh;
+  text-align: center;
 }
 .container {
   width: 100vw;
