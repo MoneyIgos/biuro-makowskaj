@@ -30,7 +30,7 @@
         >
           <v-tab
             v-for="item in items"
-            :key="item"
+            :key="item.name"
             class="d-flex flex-column align-center"
             :nuxt="true"
             :to="item.page"
