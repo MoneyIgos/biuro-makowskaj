@@ -1,5 +1,5 @@
 <template>
-  <v-content>
+  <v-main>
     <header><h1 class="text-uppercase">Kontakt</h1></header>
-  </v-content>
+  </v-main>
 </template>
