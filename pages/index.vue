@@ -1,53 +1,60 @@
 <template>
   <v-app dark style="background: rgba(0, 0, 0, 0)">
-    <v-container class="d-flex flex-column">
-      <div class="socials d-flex justify-end">
+    <v-row style="height: 56vh">
+      <v-col md="11"></v-col>
+      <v-col md="1" class="d-flex flex-column justify-center align-center">
         <a
           href="https://www.facebook.com/BiuroRachunkoweJoannaMakowska"
           target="_blank"
         >
           <fa :icon="['fab', 'facebook']" class="icon-l" />
         </a>
-      </div>
-      <div class="d-flex flex-row justify-space-around align-end header">
-        <div class="logo d-flex flex-column align-center">
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col md="7" class="d-flex align-end justify-center">
+        <div class="d-flex flex-column align-center header">
           <h1 class="text-uppercase">Biuro</h1>
           <h1 class="text-uppercase">Rachunkowe</h1>
           <p class="logo__label text-uppercase">Joanna Makowska</p>
         </div>
-        <fa
-          icon="arrow-circle-down"
-          class="scroll-btn icon-m"
-          @click="$vuetify.goTo(880)"
-        />
-      </div>
-      <div class="navbar">
-        <v-tabs
-          fixed-tabs
-          icons-and-text
-          background-color="rgba(0, 0, 0, 0)"
-          class="navbar__links"
-        >
-          <v-tab
-            v-for="item in items"
-            :key="item.name"
-            class="d-flex flex-column align-center"
-            :nuxt="true"
-            :to="item.page"
-            @click="$vuetify.goTo(880)"
+      </v-col>
+    </v-row>
+    <v-row style="padding: 0">
+      <v-col style="padding: 0">
+        <div class="navbar d-flex align-end">
+          <v-tabs
+            fixed-tabs
+            icons-and-text
+            background-color="#5b0770"
+            class="navbar__links"
           >
-            <fa :icon="item.icon" class="icon-l" />
-            {{ item.name }}
-          </v-tab>
-        </v-tabs>
-      </div>
-      <div dark class="child grey darken-4">
-        <nuxt-child />
-      </div>
-      <div class="footer">
-        <Footer />
-      </div>
-    </v-container>
+            <v-tab
+              v-for="item in items"
+              :key="item.name"
+              class="d-flex flex-column align-center"
+              :nuxt="true"
+              :to="item.page"
+              @click="$vuetify.goTo(880)"
+            >
+              <fa :icon="item.icon" class="icon-l" />
+              {{ item.name }}
+            </v-tab>
+            <fa
+              icon="arrow-circle-down"
+              class="scroll-btn icon-m"
+              @click="$vuetify.goTo(880)"
+            />
+          </v-tabs>
+        </div>
+      </v-col>
+    </v-row>
+    <div dark class="child grey darken-4">
+      <nuxt-child />
+    </div>
+    <div class="footer">
+      <Footer />
+    </div>
   </v-app>
 </template>
 
@@ -113,11 +120,6 @@ body {
   padding: 0;
 }
 .header {
-  margin-top: 41vh;
-  margin-bottom: 2vh;
-  width: 100vw;
-  height: 10vh;
-
   h1 {
     font-family: $logo-header-font !important;
     letter-spacing: 10px;
@@ -128,6 +130,7 @@ body {
 }
 .scroll-btn {
   cursor: pointer;
+  margin-left: 32px;
 }
 .socials {
   margin-top: 30vh;
@@ -139,9 +142,8 @@ body {
   font-size: 32px;
 }
 .navbar {
-  width: 100vw;
   height: 130px;
-  background-image: url('../static/footer.svg');
+  background-image: url('../static/footer.png');
 
   &__links {
     margin-top: 6vh;
