@@ -18,6 +18,7 @@ export default {
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
     ],
   },
+  target: 'static',
   css: [],
   plugins: [],
   components: true,
