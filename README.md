@@ -7,6 +7,7 @@ Site form biuro makowskaj
 ![ci](https://github.com/MoneyIgos/biuro-makowskaj/workflows/ci/badge.svg)
 [![codecov](https://codecov.io/gh/MoneyIgos/biuro-makowskaj/branch/master/graph/badge.svg?token=S5G3OGY96A)](https://codecov.io/gh/MoneyIgos/biuro-makowskaj)
 ![dependency](https://david-dm.org/MoneyIgos/biuro-makowskaj.svg)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c00d2a15-7b48-4620-830a-a72ddcdb799f/deploy-status)](https://app.netlify.com/sites/competent-mestorf-db7836/deploys)
 
 ## Build Setup
 
