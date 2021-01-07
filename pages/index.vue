@@ -41,7 +41,7 @@
               {{ item.name }}
             </v-tab>
             <fa
-              :icon="clicked ? 'arrow-circle-down' : 'arrow-circle-up'"
+              icon="arrow-circle-down"
               class="scroll-btn icon-m"
               @click="clicked = !clicked"
             />
