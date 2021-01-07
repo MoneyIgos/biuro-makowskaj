@@ -41,9 +41,9 @@
               {{ item.name }}
             </v-tab>
             <fa
-              icon="arrow-circle-down"
+              :icon="clicked ? 'arrow-circle-down' : 'arrow-circle-up'"
               class="scroll-btn icon-m"
-              @click="$vuetify.goTo(880)"
+              @click="clicked = !clicked"
             />
           </v-tabs>
         </div>
@@ -68,6 +68,7 @@ export default Vue.extend({
   },
   data() {
     return {
+      clicked: false,
       items: [
         {
           name: 'O mnie',
@@ -91,6 +92,11 @@ export default Vue.extend({
         },
       ],
     };
+  },
+  watch: {
+    clicked(go) {
+      this.$vuetify.goTo(go ? 0 : 880);
+    },
   },
 });
 </script>
