@@ -1,7 +1,7 @@
 <template>
   <v-app dark style="background: rgba(0, 0, 0, 0)">
-    <div style="height: 100vh">
-      <v-row style="height: 55.8vh">
+    <div style="height: 100vh" class="d-flex flex-column">
+      <v-row>
         <v-col md="11"></v-col>
         <v-col md="1" class="d-flex flex-column justify-center align-center">
           <a
@@ -12,7 +12,7 @@
           </a>
         </v-col>
       </v-row>
-      <v-row style="height: 30.8vh">
+      <v-row>
         <v-col md="7" class="d-flex align-end justify-center">
           <div class="d-flex flex-column align-center header">
             <h1 class="text-uppercase">Biuro</h1>
@@ -21,33 +21,31 @@
           </div>
         </v-col>
       </v-row>
-      <v-row style="height: 13.4vh">
-        <v-col style="padding: 0">
-          <div class="navbar__wrapper d-flex align-end">
-            <v-tabs
-              fixed-tabs
-              icons-and-text
-              background-color="#5b0770"
-              class="navbar__links navbar"
+      <v-row class="justify-self-end d-flex align-end">
+        <v-col style="padding: 0" class="navbar__wrapper d-flex align-end">
+          <v-tabs
+            fixed-tabs
+            icons-and-text
+            background-color="#5b0770"
+            class="navbar"
+          >
+            <v-tab
+              v-for="item in items"
+              :key="item.name"
+              class="d-flex flex-column align-center"
+              :nuxt="true"
+              :to="item.page"
+              @click="$vuetify.goTo(880)"
             >
-              <v-tab
-                v-for="item in items"
-                :key="item.name"
-                class="d-flex flex-column align-center"
-                :nuxt="true"
-                :to="item.page"
-                @click="$vuetify.goTo(880)"
-              >
-                <fa :icon="item.icon" class="icon-l" />
-                {{ item.name }}
-              </v-tab>
-              <fa
-                icon="arrow-circle-up"
-                class="d-xs-none d-sm-none d-xl-flex scroll-btn icon-m"
-                @click="clicked = !clicked"
-              />
-            </v-tabs>
-          </div>
+              <fa :icon="item.icon" class="icon-l" />
+              {{ item.name }}
+            </v-tab>
+            <fa
+              icon="arrow-circle-up"
+              class="d-xs-none d-sm-none d-xl-flex scroll-btn icon-m"
+              @click="clicked = !clicked"
+            />
+          </v-tabs>
         </v-col>
       </v-row>
     </div>
@@ -121,11 +119,8 @@ body {
   top: 0;
   z-index: 1;
   position: sticky;
-
-  &__links {
-    margin-top: 6vh;
-    font-size: 32px;
-  }
+  margin-top: 6vh;
+  font-size: 32px;
 
   &__wrapper {
     background-image: url('../static/footer.png');
