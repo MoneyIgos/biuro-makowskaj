@@ -15,7 +15,7 @@
       <v-row>
         <v-col md="7" class="d-flex align-end justify-center">
           <div class="d-flex flex-column align-center header">
-            <h1 class="text-uppercase">Biuro</h1>
+            <h1 class="text-uppercase heading-1">Biuro</h1>
             <h1 class="text-uppercase">Rachunkowe</h1>
             <p class="logo__label text-uppercase">Joanna Makowska</p>
           </div>
@@ -49,7 +49,7 @@
         </v-col>
       </v-row>
     </div>
-    <div dark class="child grey darken-4">
+    <div dark class="child grey darken-4 pa-4">
       <nuxt-child />
     </div>
     <div class="footer">
@@ -156,5 +156,14 @@ body {
 .scroll-btn {
   cursor: pointer;
   display: none;
+}
+
+@media (max-width: 900px) {
+  .header {
+    h1 {
+      font-size: 64px;
+      height: 70px;
+    }
+  }
 }
 </style>
