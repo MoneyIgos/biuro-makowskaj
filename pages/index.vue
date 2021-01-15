@@ -42,7 +42,7 @@
             </v-tab>
             <fa
               icon="arrow-circle-up"
-              class="d-xs-none d-sm-none d-xl-flex scroll-btn icon-m"
+              class="d-xl-flex scroll-btn icon-m"
               @click="clicked = !clicked"
             />
           </v-tabs>
@@ -155,5 +155,6 @@ body {
 }
 .scroll-btn {
   cursor: pointer;
+  display: none;
 }
 </style>
