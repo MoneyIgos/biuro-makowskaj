@@ -1,54 +1,56 @@
 <template>
   <v-app dark style="background: rgba(0, 0, 0, 0)">
-    <v-row style="height: 56vh">
-      <v-col md="11"></v-col>
-      <v-col md="1" class="d-flex flex-column justify-center align-center">
-        <a
-          href="https://www.facebook.com/BiuroRachunkoweJoannaMakowska"
-          target="_blank"
-        >
-          <fa :icon="['fab', 'facebook']" class="icon-l" />
-        </a>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col md="7" class="d-flex align-end justify-center">
-        <div class="d-flex flex-column align-center header">
-          <h1 class="text-uppercase">Biuro</h1>
-          <h1 class="text-uppercase">Rachunkowe</h1>
-          <p class="logo__label text-uppercase">Joanna Makowska</p>
-        </div>
-      </v-col>
-    </v-row>
-    <v-row style="padding: 0">
-      <v-col style="padding: 0">
-        <div class="navbar d-flex align-end">
-          <v-tabs
-            fixed-tabs
-            icons-and-text
-            background-color="#5b0770"
-            class="navbar__links"
+    <div style="height: 100vh">
+      <v-row style="height: 55.8vh">
+        <v-col md="11"></v-col>
+        <v-col md="1" class="d-flex flex-column justify-center align-center">
+          <a
+            href="https://www.facebook.com/BiuroRachunkoweJoannaMakowska"
+            target="_blank"
           >
-            <v-tab
-              v-for="item in items"
-              :key="item.name"
-              class="d-flex flex-column align-center"
-              :nuxt="true"
-              :to="item.page"
-              @click="$vuetify.goTo(880)"
+            <fa :icon="['fab', 'facebook']" class="icon-l" />
+          </a>
+        </v-col>
+      </v-row>
+      <v-row style="height: 30.8vh">
+        <v-col md="7" class="d-flex align-end justify-center">
+          <div class="d-flex flex-column align-center header">
+            <h1 class="text-uppercase">Biuro</h1>
+            <h1 class="text-uppercase">Rachunkowe</h1>
+            <p class="logo__label text-uppercase">Joanna Makowska</p>
+          </div>
+        </v-col>
+      </v-row>
+      <v-row style="height: 13.4vh">
+        <v-col style="padding: 0">
+          <div class="navbar__wrapper d-flex align-end">
+            <v-tabs
+              fixed-tabs
+              icons-and-text
+              background-color="#5b0770"
+              class="navbar__links navbar"
             >
-              <fa :icon="item.icon" class="icon-l" />
-              {{ item.name }}
-            </v-tab>
-            <fa
-              icon="arrow-circle-up"
-              class="scroll-btn icon-m"
-              @click="clicked = !clicked"
-            />
-          </v-tabs>
-        </div>
-      </v-col>
-    </v-row>
+              <v-tab
+                v-for="item in items"
+                :key="item.name"
+                class="d-flex flex-column align-center"
+                :nuxt="true"
+                :to="item.page"
+                @click="$vuetify.goTo(880)"
+              >
+                <fa :icon="item.icon" class="icon-l" />
+                {{ item.name }}
+              </v-tab>
+              <fa
+                icon="arrow-circle-up"
+                class="d-xs-none d-sm-none d-xl-flex scroll-btn icon-m"
+                @click="clicked = !clicked"
+              />
+            </v-tabs>
+          </div>
+        </v-col>
+      </v-row>
+    </div>
     <div dark class="child grey darken-4">
       <nuxt-child />
     </div>
@@ -110,39 +112,25 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow-x: hidden;
   margin: 0 !important;
 }
-.child {
-  width: 100vw;
-  height: 90vh;
-}
-.footer {
-  width: 100vw;
-  height: 10vh;
-  text-align: center;
-}
 .container {
-  width: 100vw;
-  height: 200vh;
-  margin: 0;
-  padding: 0;
+  position: relative;
 }
-.header {
-  h1 {
-    font-family: $logo-header-font !important;
-    letter-spacing: 10px;
-    font-weight: 400;
-    font-size: 86px;
-    height: 80px;
+.navbar {
+  top: 0;
+  z-index: 1;
+  position: sticky;
+
+  &__links {
+    margin-top: 6vh;
+    font-size: 32px;
   }
-}
-.scroll-btn {
-  cursor: pointer;
-  margin-left: 32px;
-}
-.socials {
-  margin-top: 30vh;
+
+  &__wrapper {
+    background-image: url('../static/footer.png');
+    height: 130px;
+  }
 }
 .icon-m {
   font-size: 24px;
@@ -150,22 +138,27 @@ body {
 .icon-l {
   font-size: 32px;
 }
-.navbar {
-  height: 130px;
-  background-image: url('../static/footer.png');
-
-  &__links {
-    margin-top: 6vh;
-    font-size: 32px;
-  }
-}
 .logo__label {
-  margin-top: 40px;
+  margin-top: 20px;
   border-top: 3px solid #fff;
-  width: 500px;
   padding: 15px;
   text-align: center;
   font-family: $logo-label-font !important;
   letter-spacing: 10px;
+}
+.header {
+  h1 {
+    font-family: $logo-header-font !important;
+    letter-spacing: 10px;
+    font-weight: 400;
+    font-size: 86px;
+    height: 90px;
+  }
+}
+.child {
+  width: 100vw;
+}
+.scroll-btn {
+  cursor: pointer;
 }
 </style>
