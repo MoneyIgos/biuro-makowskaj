@@ -111,9 +111,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 !important;
+  overflow-x: hidden;
 }
 .container {
   position: relative;
+  max-width: 100vw;
 }
 .navbar {
   top: 0;
@@ -161,9 +163,12 @@ body {
 @media (max-width: 900px) {
   .header {
     h1 {
-      font-size: 64px;
-      height: 70px;
+      font-size: 56px;
+      height: 60px;
     }
+  }
+  .logo__label {
+    font-size: 0.8rem;
   }
 }
 </style>
