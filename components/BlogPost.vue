@@ -38,6 +38,12 @@ export default Vue.extend({
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc non blandit massa enim. Non sodales neque sodales ut etiam sit. Proin fermentum leo vel orci. Vel orci porta non pulvinar neque laoreet suspendisse. Elementum integer enim neque volutpat ac. Ornare lectus sit amet est placerat in egestas. Est ullamcorper eget nulla facilisi etiam dignissim diam. Id faucibus nisl tincidunt eget. Sit amet consectetur adipiscing elit ut. Non blandit massa enim nec dui nunc. Ultrices eros in cursus turpis massa tincidunt dui ut ornare.',
         },
+        {
+          title: 'Lorem Ipsum',
+          image: '',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc non blandit massa enim. Non sodales neque sodales ut etiam sit. Proin fermentum leo vel orci. Vel orci porta non pulvinar neque laoreet suspendisse. Elementum integer enim neque volutpat ac. Ornare lectus sit amet est placerat in egestas. Est ullamcorper eget nulla facilisi etiam dignissim diam. Id faucibus nisl tincidunt eget. Sit amet consectetur adipiscing elit ut. Non blandit massa enim nec dui nunc. Ultrices eros in cursus turpis massa tincidunt dui ut ornare. Lacus laoreet non curabitur gravida arcu ac tortor. Est ante in nibh mauris cursus. Vulputate eu scelerisque felis imperdiet proin. Lectus sit amet est placerat in egestas. Lectus arcu bibendum at varius. Aliquam nulla facilisi cras fermentum odio. Pharetra et ultrices neque ornare aenean euismod elementum nisi quis. Felis eget velit aliquet sagittis id consectetur purus ut. Praesent semper feugiat nibh sed pulvinar proin. Vitae proin sagittis nisl rhoncus mattis rhoncus urna. Consequat interdum varius sit amet mattis vulputate enim nulla. Vitae auctor eu augue ut. Egestas erat imperdiet sed euismod nisi porta lorem.',
+        },
       ],
     };
   },
