@@ -1,7 +1,7 @@
 <template>
-  <v-main>
+  <v-content>
     <BlogPost />
-  </v-main>
+  </v-content>
 </template>
 
 <script lang="ts">
