@@ -99,7 +99,7 @@ export default Vue.extend({
     },
   },
   created() {
-    this.$router.push('/about');
+    if (this.$router.currentRoute.path === '/') this.$router.push('/about');
   },
 });
 </script>

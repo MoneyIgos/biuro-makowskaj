@@ -1,5 +1,5 @@
 <template>
-  <v-main dark class="black d-flex align-center footer headline">
+  <v-footer dark class="black d-flex align-center justify-center headline">
     <p>Copyright &copy;2021 Igor Makowski</p>
-  </v-main>
+  </v-footer>
 </template>
