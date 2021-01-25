@@ -4,6 +4,8 @@ import { config } from '@vue/test-utils';
 
 Vue.use(Vuetify);
 
+Vue.prototype.$router = {};
+
 const createBlankComponent = () => ({
   render(h) {
     return h('div', this.$slots.default);
