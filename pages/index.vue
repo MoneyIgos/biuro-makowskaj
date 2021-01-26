@@ -61,10 +61,17 @@
 
 <script lang="ts">
 import Vue from 'vue';
-// import throttle from 'lodash.throttle';
+import type { VueConstructor } from 'vue';
+import type { VTabs } from 'vuetify/lib';
 import Footer from '../components/Footer.vue';
 
-export default Vue.extend({
+export default (Vue as VueConstructor<
+  Vue & {
+    $refs: {
+      nav: typeof VTabs;
+    };
+  }
+>).extend({
   components: {
     Footer,
   },
@@ -102,6 +109,16 @@ export default Vue.extend({
   },
   created() {
     if (this.$router?.currentRoute?.path === '/') this.$router.push('/about');
+  },
+  mounted() {
+    const navbarPosition = ((this.$refs.nav as any)
+      .$el as any).getBoundingClientRect().y;
+    window.addEventListener('scroll', () => {
+      ((this.$refs.nav as any).$el as any).classList.toggle(
+        'sticky',
+        window.scrollY > navbarPosition,
+      );
+    });
   },
 });
 </script>
@@ -159,6 +176,11 @@ body {
 }
 .scroll-btn {
   cursor: pointer;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  margin: 0;
 }
 
 @media (max-width: 900px) {
