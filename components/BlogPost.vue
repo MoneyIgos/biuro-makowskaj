@@ -35,7 +35,7 @@ export default Vue.extend({
   },
   data() {
     return {
-      parsedDate: relativeDate(this.date),
+      parsedDate: relativeDate(this.date, this.date),
     };
   },
 });
