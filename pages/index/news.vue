@@ -1,5 +1,5 @@
 <template>
-  <v-content>
+  <v-main>
     <div v-for="post in posts" :key="post.title">
       <BlogPost
         :title="post.title"
@@ -7,7 +7,7 @@
         :description="post.description"
       />
     </div>
-  </v-content>
+  </v-main>
 </template>
 
 <script lang="ts">
