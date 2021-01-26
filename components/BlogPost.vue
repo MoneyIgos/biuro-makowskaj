@@ -6,6 +6,9 @@
           <div class="d-flex justify-center">
             <h1>{{ title }}</h1>
           </div>
+          <div class="caption">
+            <p>{{ parsedDate }}</p>
+          </div>
           <div class="d-flex justify-center">
             <v-img :src="image" />
           </div>
@@ -20,6 +23,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import relativeDate from '../assets/relativeDate';
 
 export default Vue.extend({
   name: 'BlogPost',
@@ -28,6 +32,11 @@ export default Vue.extend({
     image: String,
     description: String,
     date: Date,
+  },
+  data() {
+    return {
+      parsedDate: relativeDate(this.date),
+    };
   },
 });
 </script>

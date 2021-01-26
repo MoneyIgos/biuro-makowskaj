@@ -24,6 +24,7 @@
       <v-row class="justify-self-end d-flex align-end">
         <v-col style="padding: 0" class="navbar__wrapper d-flex align-end">
           <v-tabs
+            ref="nav"
             fixed-tabs
             icons-and-text
             background-color="#5b0770"
@@ -60,6 +61,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
+// import throttle from 'lodash.throttle';
 import Footer from '../components/Footer.vue';
 
 export default Vue.extend({
