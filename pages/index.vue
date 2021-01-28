@@ -173,6 +173,7 @@ body {
 }
 .child {
   width: 100vw;
+  min-height: 85vh;
 }
 .scroll-btn {
   cursor: pointer;

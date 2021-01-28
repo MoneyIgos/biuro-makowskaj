@@ -20,7 +20,7 @@ export default {
   },
   target: 'static',
   css: [],
-  plugins: [],
+  plugins: [{ src: './plugins/vuelidate' }],
   components: true,
   buildModules: [
     '@nuxt/typescript-build',
