@@ -36,7 +36,7 @@
               class="d-flex flex-column align-center"
               :nuxt="true"
               :to="item.page"
-              @click="$vuetify.goTo(880)"
+              @click="$vuetify.goTo(800)"
             >
               <fa :icon="item.icon" class="icon-l" />
               {{ item.name }}
