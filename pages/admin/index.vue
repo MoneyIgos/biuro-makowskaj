@@ -55,11 +55,6 @@ export default Vue.extend({
       this.$router.push(link);
     },
   },
-  // mounted() {
-  //   this.group = this.links.findIndex(({ link }) =>
-  //     link.startsWith(this.$route.path),
-  //   );
-  // },
 });
 </script>
 © 2021 GitHub, Inc.
