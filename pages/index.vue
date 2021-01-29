@@ -13,7 +13,7 @@
         </v-col>
       </v-row>
       <v-row>
-        <v-col md="7" class="d-flex align-end justify-center">
+        <v-col md="7" class="d-flex align-end justify-start mt-16 mb-n16 ml-16">
           <div class="d-flex flex-column align-center header">
             <h1 class="text-uppercase heading-1">Biuro</h1>
             <h1 class="text-uppercase">Rachunkowe</h1>
