@@ -44,7 +44,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .blog-post {
   background-color: #121212;
-  box-shadow: 8px 8px 8px #000;
+  box-shadow: 10px 10px 8px #101010;
   width: 50vw;
 }
 </style>
