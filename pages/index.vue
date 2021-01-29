@@ -135,7 +135,7 @@ body {
 }
 h1 {
   font-family: $header-font;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   font-weight: 400;
 }
 .navbar {

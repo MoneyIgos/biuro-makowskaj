@@ -73,3 +73,14 @@ export default Vue.extend({
   },
 });
 </script>
+
+<style lang="scss" scoped>
+body {
+  font-family: $body-font-family;
+}
+h1 {
+  font-family: $header-font;
+  letter-spacing: 3px;
+  font-weight: 400;
+}
+</style>
