@@ -131,6 +131,12 @@ body {
   background-size: cover;
   margin: 0 !important;
   overflow-x: hidden;
+  font-family: $body-font-family;
+}
+h1 {
+  font-family: $header-font;
+  letter-spacing: 4px;
+  font-weight: 400;
 }
 .navbar {
   margin-top: 6vh;
