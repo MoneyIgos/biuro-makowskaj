@@ -2,7 +2,14 @@
   <v-main class="d-flex flex-column align-center">
     <v-row>
       <v-col>
-        <header class="d-flex text-h4 ma-4"><h1>Kontakt</h1></header>
+        <header class="d-flex text-h3 mt-12 mb-12"><h1>Kontakt:</h1></header>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col class="text-h5">
+        <p><b>E-mail: </b>biuromakowskaj@gmail.com</p>
+        <p><b>Telefon: </b>505 107 100</p>
+        <p class="mt-12 mb-12 text-h4">Lub Napisz Wiadomość Tutaj!</p>
       </v-col>
     </v-row>
     <v-row>
