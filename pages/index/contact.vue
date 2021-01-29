@@ -128,6 +128,8 @@ export default Vue.extend({
         setTimeout(() => {
           this.sentMessage = '';
         }, 3000);
+      } else {
+        this.sentMessage = '';
       }
     },
   },
