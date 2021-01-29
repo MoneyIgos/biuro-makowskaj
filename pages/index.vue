@@ -1,6 +1,6 @@
 <template>
   <v-app dark style="background: rgba(0, 0, 0, 0)">
-    <div style="height: 100vh" class="d-flex flex-column">
+    <div style="height: 98.6vh" class="d-flex flex-column">
       <v-row>
         <v-col md="11"></v-col>
         <v-col md="1" class="d-flex flex-column justify-center align-center">
@@ -43,7 +43,7 @@
             </v-tab>
             <fa
               icon="arrow-circle-up"
-              class="d-none d-lg-flex scroll-btn icon-m"
+              class="d-none d-lg-flex scroll-btn icon-m ml-5"
               @click="clicked = !clicked"
             />
           </v-tabs>
@@ -132,14 +132,7 @@ body {
   margin: 0 !important;
   overflow-x: hidden;
 }
-.container {
-  position: relative;
-  max-width: 100vw;
-}
 .navbar {
-  top: 0;
-  z-index: 1;
-  position: sticky;
   margin-top: 6vh;
   font-size: 32px;
 
