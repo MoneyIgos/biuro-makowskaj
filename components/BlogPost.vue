@@ -1,8 +1,8 @@
 <template>
   <div class="d-flex flex-column align-center">
-    <div class="rounded-xl blog-post">
+    <div class="rounded-xl blog-post ma-4 pa-8">
       <v-row>
-        <v-col>
+        <v-col elevation="15">
           <div class="d-flex justify-center">
             <h1>{{ title }}</h1>
           </div>
@@ -44,8 +44,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .blog-post {
   background-color: #121212;
+  box-shadow: 8px 8px 8px #000;
   width: 50vw;
-  padding: 30px;
-  margin: 20px;
 }
 </style>
