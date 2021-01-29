@@ -57,7 +57,6 @@ export default Vue.extend({
   },
 });
 </script>
-© 2021 GitHub, Inc.
 
 <style lang="scss" scoped>
 body {
