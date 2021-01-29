@@ -49,7 +49,7 @@
               <v-btn color="secondary" :disabled="invalid" @click="submit"
                 >Wyślij</v-btn
               >
-              <v-btn color="#202020" @click="clear">Wyczyść</v-btn>
+              <v-btn color="#303030" @click="clear">Wyczyść</v-btn>
             </div>
           </form>
         </div>
