@@ -19,6 +19,20 @@
       </v-app-bar>
       <v-main>
         <v-row>
+          <v-col class="d-flex justify-end mr-16 mt-4">
+            <div>
+              <v-text-field
+                v-model="search"
+                outlined
+                clearable
+                dense
+                label="Wyszukaj Post"
+                append-icon="mdi-magnify"
+              ></v-text-field>
+            </div>
+          </v-col>
+        </v-row>
+        <v-row>
           <v-col class="d-flex justify-center ma-12 text-h5">
             <v-header><h1>Zarzadzaj Postami</h1></v-header>
           </v-col>
@@ -27,7 +41,7 @@
           <v-col class="d-flex flex-column align-center">
             <v-btn x-large color="secondary">Dodaj Post</v-btn>
             <div
-              v-for="post in posts"
+              v-for="post in filteredPosts"
               :key="post.title"
               class="d-flex flex-column align-center"
             >
@@ -59,6 +73,7 @@ export default Vue.extend({
   },
   data() {
     return {
+      search: '',
       drawer: false,
       group: 0,
       links: [
@@ -96,6 +111,13 @@ export default Vue.extend({
         },
       ],
     };
+  },
+  computed: {
+    filteredPosts() {
+      return this.posts.filter(post =>
+        post.title.toLowerCase().match(this.search.toLowerCase()),
+      );
+    },
   },
   watch: {
     group(group) {
