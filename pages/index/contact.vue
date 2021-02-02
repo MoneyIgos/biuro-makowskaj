@@ -7,7 +7,6 @@
     </v-row>
     <v-row>
       <v-col class="text-h5">
-        <p><b>E-mail: </b>biuromakowskaj@gmail.com</p>
         <p><b>Telefon: </b>505 107 100</p>
         <p class="mt-12 mb-12 text-h4">Lub Napisz Wiadomość Tutaj!</p>
       </v-col>
