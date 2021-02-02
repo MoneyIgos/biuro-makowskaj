@@ -47,4 +47,9 @@ export default Vue.extend({
   box-shadow: 10px 10px 8px #101010;
   width: 50vw;
 }
+@media (max-width: 900px) {
+  .blog-post {
+    width: 100vw;
+  }
+}
 </style>
