@@ -28,9 +28,18 @@ import relativeDate from '../assets/relativeDate';
 export default Vue.extend({
   name: 'BlogPost',
   props: {
-    title: String,
-    image: String,
-    description: String,
+    title: {
+      type: String,
+      default: '',
+    },
+    image: {
+      type: String,
+      default: '',
+    },
+    description: {
+      type: String,
+      default: '',
+    },
     date: Date,
   },
   data() {

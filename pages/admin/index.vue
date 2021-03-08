@@ -19,7 +19,7 @@
         </v-row>
         <v-row>
           <v-col class="d-flex justify-center ma-12 text-h5">
-            <v-header><h1>Zarzadzaj Postami</h1></v-header>
+            <v-header><h1>Zarządzaj Postami</h1></v-header>
           </v-col>
         </v-row>
         <v-row>

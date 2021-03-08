@@ -30,11 +30,11 @@ export default Vue.extend({
       group: 0,
       links: [
         {
-          title: 'Zarządaj Postami',
+          title: 'Zarządzaj Postami',
           link: '/admin',
         },
         {
-          title: 'Zarządaj użytkownikami',
+          title: 'Zarządzaj użytkownikami',
           link: '/admin/users',
         },
       ],

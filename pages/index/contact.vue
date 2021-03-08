@@ -93,8 +93,8 @@ export default Vue.extend({
     emailErrors() {
       const errors: string[] = [];
       if (!this.$v.email.$dirty) return errors;
-      !this.$v.email.email && errors.push('Adress E-mail musi być poprawny');
-      !this.$v.email.required && errors.push('Adress E-mail jest wymagany');
+      !this.$v.email.email && errors.push('Adres E-mail musi być poprawny');
+      !this.$v.email.required && errors.push('Adres E-mail jest wymagany');
       return errors;
     },
     titleErrors() {
