@@ -33,7 +33,7 @@
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.8.3",
     "lodash.throttle": "^4.1.1",
-    "nuxt": "^2.14.12",
+    "nuxt": "^2.15.3",
     "vuelidate": "^0.7.6"
   },
   "devDependencies": {
